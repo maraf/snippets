@@ -34,7 +34,7 @@
 /// <typeparam name="T">The type of the envelope body.</typeparam>
 /// <param name="envelope">The envelope which metadata to extend.</param>
 /// <param name="value">The vale of the '$name$'.</param>
-/// <returns><paramref name="envolope"/>(for fluency).</returns>
+/// <returns><paramref name="envelope"/>(for fluency).</returns>
 public static Envelope<T> Add$name$<T>(this Envelope<T> envelope, $type$ value)
 {
     Ensure.NotNull(envelope, "envelope");
