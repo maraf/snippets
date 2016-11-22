@@ -5,12 +5,12 @@
             <SnippetTypes>
                 <SnippetType>Expansion</SnippetType>
             </SnippetTypes>
-            <Title>Constructor with one not null parameter saved in readonly field.</Title>
+            <Title>Constructor with one not null parameter saved in public readonly property.</Title>
             <Author>Marek Fišera</Author>
             <Description>Creates readonly field and constructor with not null check and value assign.</Description>
             <HelpUrl>
             </HelpUrl>
-            <Shortcut>ctor1irf</Shortcut>
+            <Shortcut>ctor1up</Shortcut>
         </Header>
         <Snippet>
             <Imports>
@@ -35,14 +35,19 @@
                     <ToolTip>Name of the parameter.</ToolTip>
                     <Default>value</Default>
                 </Literal>
+                <Literal Editable="true">
+                    <ID>property</ID>
+                    <ToolTip>Name of the property.</ToolTip>
+                    <Default>Value</Default>
+                </Literal>
             </Declarations>
             <Code Language="csharp" Kind="method decl">
-                <![CDATA[private readonly $type$ $name$;
+                <![CDATA[public $type$ $property$ { get; private set; }
 
 public $classname$($type$ $name$)
 {
     Ensure.NotNull($name$, "$name$");
-    this.$name$ = $name$;
+    $property$ = $name$;
 }]]>
             </Code>
         </Snippet>

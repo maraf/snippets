@@ -5,12 +5,12 @@
             <SnippetTypes>
                 <SnippetType>Expansion</SnippetType>
             </SnippetTypes>
-            <Title>Constructor with three not null parameter saved in readonly field.</Title>
+            <Title>Constructor with two not null parameters.</Title>
             <Author>Marek Fišera</Author>
-            <Description>Creates readonly field and constructor with not null check and value assign.</Description>
+            <Description>Creates readonly field and constructor with not null check.</Description>
             <HelpUrl>
             </HelpUrl>
-            <Shortcut>ctor3irf</Shortcut>
+            <Shortcut>ctor2</Shortcut>
         </Header>
         <Snippet>
             <Imports>
@@ -45,30 +45,13 @@
                     <ToolTip>Name of the second parameter.</ToolTip>
                     <Default>value</Default>
                 </Literal>
-                <Literal Editable="true">
-                    <ID>type3</ID>
-                    <ToolTip>Type of the third parameter.</ToolTip>
-                    <Default>object</Default>
-                </Literal>
-                <Literal Editable="true">
-                    <ID>name3</ID>
-                    <ToolTip>Name of the third parameter.</ToolTip>
-                    <Default>value</Default>
-                </Literal>
             </Declarations>
             <Code Language="csharp" Kind="method decl">
-                <![CDATA[private readonly $type1$ $name1$;
-private readonly $type2$ $name2$;
-private readonly $type3$ $name3$;
-
-public $classname$($type1$ $name1$, $type2$ $name2$, $type3$ $name3$)
+                <![CDATA[public $classname$($type1$ $name1$, $type2$ $name2$)
 {
     Ensure.NotNull($name1$, "$name1$");
     Ensure.NotNull($name2$, "$name2$");
-    Ensure.NotNull($name3$, "$name3$");
-    this.$name1$ = $name1$;
-    this.$name2$ = $name2$;
-    this.$name3$ = $name3$;
+    $end$
 }]]>
             </Code>
         </Snippet>

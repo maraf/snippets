@@ -5,12 +5,12 @@
             <SnippetTypes>
                 <SnippetType>Expansion</SnippetType>
             </SnippetTypes>
-            <Title>Constructor with three not null parameter saved in readonly field.</Title>
+            <Title>Constructor with three not null parameters.</Title>
             <Author>Marek Fišera</Author>
-            <Description>Creates readonly field and constructor with not null check and value assign.</Description>
+            <Description>Creates readonly field and constructor with not null check.</Description>
             <HelpUrl>
             </HelpUrl>
-            <Shortcut>ctor3irf</Shortcut>
+            <Shortcut>ctor3</Shortcut>
         </Header>
         <Snippet>
             <Imports>
@@ -57,18 +57,12 @@
                 </Literal>
             </Declarations>
             <Code Language="csharp" Kind="method decl">
-                <![CDATA[private readonly $type1$ $name1$;
-private readonly $type2$ $name2$;
-private readonly $type3$ $name3$;
-
-public $classname$($type1$ $name1$, $type2$ $name2$, $type3$ $name3$)
+                <![CDATA[public $classname$($type1$ $name1$, $type2$ $name2$, $type3$ $name3$)
 {
     Ensure.NotNull($name1$, "$name1$");
     Ensure.NotNull($name2$, "$name2$");
     Ensure.NotNull($name3$, "$name3$");
-    this.$name1$ = $name1$;
-    this.$name2$ = $name2$;
-    this.$name3$ = $name3$;
+    $end$
 }]]>
             </Code>
         </Snippet>
